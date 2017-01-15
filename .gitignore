@@ -1,0 +1,9 @@
+xcuserdata
+*.dSYM
+.svn
+*.o
+.DS_Store
+build
+xcshareddata
+*.tags
+DerivedData
