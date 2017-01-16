@@ -20,7 +20,7 @@ open class CJBaseViewController: UIViewController {
         
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont.navigationTitle,
-            NSForegroundColorAttributeName: UIColor.theme
+            NSForegroundColorAttributeName: UIColor.navigationTitle
         ]
     }
     

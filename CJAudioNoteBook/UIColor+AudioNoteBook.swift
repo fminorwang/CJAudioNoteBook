@@ -15,4 +15,16 @@ extension UIColor {
             return UIColor(red: 0.0 / 255.0, green: 191.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
         }
     }
+    
+    open class var navigationTitle: UIColor {
+        get {
+            return UIColor.black
+        }
+    }
+    
+    open class var singleLineCellTitle: UIColor {
+        get {
+            return UIColor.black
+        }
+    }
 }

@@ -9,24 +9,7 @@
 import Foundation
 import AVFoundation
 
-private let AUDIO_FILE_DIRECOTORY = "/Audio"
-
-public class CJSimpleRecorder: CJAudioRecorder {
-    
-    fileprivate static var _audioDocumentPath: String {
-        get {
-            let _documentPath = NSHomeDirectory() + "/Documents" + AUDIO_FILE_DIRECOTORY
-            let _fm = FileManager()
-            if ( _fm.fileExists(atPath: _documentPath , isDirectory: nil) == false ) {
-                do {
-                    try _fm.createDirectory(atPath: _documentPath, withIntermediateDirectories: true, attributes: nil)
-                } catch {
-                    print("Error: " + error.localizedDescription)
-                }
-            }
-            return _documentPath
-        }
-    }
+public class CJSimpleRecorder: CJMeasurableAudioPlayer {
     
     fileprivate var _fileName: String?
     fileprivate var _iRecorder: AVAudioRecorder?
@@ -55,23 +38,46 @@ extension CJSimpleRecorder {
         print("Pause recording.")
         _iRecorder?.pause()
     }
+    
+    public var isRecording: Bool {
+        get {
+            if let _isRecording = _iRecorder?.isRecording {
+                return _isRecording
+            }
+            return false
+        }
+    }
+}
+
+// MARK: measure
+extension CJSimpleRecorder {
+    var currentVolume: Float {
+        get {
+            if self.isRecording == false {
+                return 0.0
+            }
+            _iRecorder!.updateMeters()
+            return _iRecorder!.averagePower(forChannel: 0)
+        }
+    }
 }
 
 // MARK: internal methods
 extension CJSimpleRecorder {
-    fileprivate func _init(with fileName: String?) {
+    fileprivate func _init(with filePath: String?) {
         _clear()
         
-        guard let _fileName = fileName else {
+        guard let _filePath = filePath else {
             print("Error: empty file name!")
             return
         }
         
-        let _url = URL(fileURLWithPath: CJSimpleRecorder._audioDocumentPath + "/" + _fileName)
+        let _url = URL(fileURLWithPath: _filePath)
         do {
             try _iRecorder = AVAudioRecorder(url: _url, settings: [:])
+            _iRecorder?.isMeteringEnabled = true
         } catch {
-            print("Error: " + error.localizedDescription)
+            print("Initalize audio recorder failed! " + error.localizedDescription)
             return
         }
     }

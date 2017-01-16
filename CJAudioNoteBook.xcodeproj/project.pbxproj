@@ -15,6 +15,7 @@
 		2002F8C21E2BAE8100604AB7 /* CJSimpleRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002F8C11E2BAE8100604AB7 /* CJSimpleRecorder.swift */; };
 		2002F8C41E2BAE9400604AB7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2002F8C31E2BAE9400604AB7 /* AVFoundation.framework */; };
 		2002F8C71E2BAFFA00604AB7 /* CJAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002F8C61E2BAFFA00604AB7 /* CJAudioRecorder.swift */; };
+		2016217B1E2CDC53007F7583 /* CJPlayerProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016217A1E2CDC53007F7583 /* CJPlayerProgressBar.swift */; };
 		2043EBC81E2A4BEE00137B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043EBC71E2A4BEE00137B66 /* AppDelegate.swift */; };
 		2043EBCA1E2A4BEE00137B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043EBC91E2A4BEE00137B66 /* ViewController.swift */; };
 		2043EBCD1E2A4BEE00137B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2043EBCB1E2A4BEE00137B66 /* Main.storyboard */; };
@@ -25,6 +26,17 @@
 		2043EBE41E2A4F5800137B66 /* CJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2043EBE21E2A4F5800137B66 /* CJDataModel.xcdatamodeld */; };
 		2043EBE71E2A516300137B66 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2043EBE61E2A516300137B66 /* CoreData.framework */; };
 		20450EDB1E2BDA7A0029A24B /* CJAudioAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDA1E2BDA7A0029A24B /* CJAudioAgent.swift */; };
+		20450EDE1E2BE66E0029A24B /* CJBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDD1E2BE66E0029A24B /* CJBean.swift */; };
+		20450EE01E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */; };
+		208631BA1E2C7C2900452604 /* CJAudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208631B91E2C7C2900452604 /* CJAudioItem.swift */; };
+		208631BC1E2C815B00452604 /* Date+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */; };
+		20974F201E2C880800B86D9A /* String+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */; };
+		20974F241E2CABA400B86D9A /* CJPlaybackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F231E2CABA400B86D9A /* CJPlaybackTableViewCell.swift */; };
+		20974F261E2CB39800B86D9A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F251E2CB39800B86D9A /* constants.swift */; };
+		20974F281E2CB42900B86D9A /* CJAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F271E2CB42900B86D9A /* CJAudioPlayer.swift */; };
+		20974F2A1E2CB7A500B86D9A /* CJSimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F291E2CB7A500B86D9A /* CJSimplePlayer.swift */; };
+		20974F2C1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F2B1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift */; };
+		20974F2F1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F2E1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +48,7 @@
 		2002F8C11E2BAE8100604AB7 /* CJSimpleRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJSimpleRecorder.swift; sourceTree = "<group>"; };
 		2002F8C31E2BAE9400604AB7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2002F8C61E2BAFFA00604AB7 /* CJAudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioRecorder.swift; sourceTree = "<group>"; };
+		2016217A1E2CDC53007F7583 /* CJPlayerProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJPlayerProgressBar.swift; sourceTree = "<group>"; };
 		2043EBC41E2A4BEE00137B66 /* CJAudioNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJAudioNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2043EBC71E2A4BEE00137B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2043EBC91E2A4BEE00137B66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +61,18 @@
 		2043EBE31E2A4F5800137B66 /* CJDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CJDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2043EBE61E2A516300137B66 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		20450EDA1E2BDA7A0029A24B /* CJAudioAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioAgent.swift; sourceTree = "<group>"; };
+		20450EDD1E2BE66E0029A24B /* CJBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJBean.swift; sourceTree = "<group>"; };
+		20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+AudioNoteBook.swift"; sourceTree = "<group>"; };
+		208631B91E2C7C2900452604 /* CJAudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioItem.swift; sourceTree = "<group>"; };
+		208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+AudioNoteBook.swift"; sourceTree = "<group>"; };
+		20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AudioNoteBook.swift"; sourceTree = "<group>"; };
+		20974F211E2C888600B86D9A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		20974F231E2CABA400B86D9A /* CJPlaybackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJPlaybackTableViewCell.swift; sourceTree = "<group>"; };
+		20974F251E2CB39800B86D9A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		20974F271E2CB42900B86D9A /* CJAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioPlayer.swift; sourceTree = "<group>"; };
+		20974F291E2CB7A500B86D9A /* CJSimplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJSimplePlayer.swift; sourceTree = "<group>"; };
+		20974F2B1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRecordVolumeLayer.swift; sourceTree = "<group>"; };
+		20974F2E1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJBaseRecordVolumeLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +91,7 @@
 		2002F8C01E2BAE3D00604AB7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				20974F2D1E2CC9BA00B86D9A /* UI */,
 				20450EDC1E2BDDD10029A24B /* Player */,
 				2002F8C51E2BAFC000604AB7 /* Recorder */,
 				20450EDA1E2BDA7A0029A24B /* CJAudioAgent.swift */,
@@ -121,6 +147,11 @@
 			children = (
 				2002F8BA1E2A620700604AB7 /* UIColor+AudioNoteBook.swift */,
 				2002F8BE1E2BA63100604AB7 /* UIFont+AudioNoteBook.swift */,
+				20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */,
+				208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */,
+				20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */,
+				20974F251E2CB39800B86D9A /* constants.swift */,
+				2016217A1E2CDC53007F7583 /* CJPlayerProgressBar.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -130,6 +161,7 @@
 			children = (
 				2002F8B61E2A60E800604AB7 /* CJRecordViewController.swift */,
 				2002F8B81E2A611A00604AB7 /* CJPlaybackListViewController.swift */,
+				20974F231E2CABA400B86D9A /* CJPlaybackTableViewCell.swift */,
 				2002F8BC1E2B801900604AB7 /* CJBaseViewController.swift */,
 			);
 			name = Controllers;
@@ -138,6 +170,8 @@
 		2043EBDB1E2A4CC300137B66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				20450EDD1E2BE66E0029A24B /* CJBean.swift */,
+				208631B91E2C7C2900452604 /* CJAudioItem.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -164,6 +198,7 @@
 		2043EBE51E2A516300137B66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20974F211E2C888600B86D9A /* Security.framework */,
 				2002F8C31E2BAE9400604AB7 /* AVFoundation.framework */,
 				2043EBE61E2A516300137B66 /* CoreData.framework */,
 			);
@@ -173,8 +208,19 @@
 		20450EDC1E2BDDD10029A24B /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				20974F291E2CB7A500B86D9A /* CJSimplePlayer.swift */,
+				20974F271E2CB42900B86D9A /* CJAudioPlayer.swift */,
 			);
 			name = Player;
+			sourceTree = "<group>";
+		};
+		20974F2D1E2CC9BA00B86D9A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20974F2B1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift */,
+				20974F2E1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,17 +297,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				2043EBDE1E2A4D9600137B66 /* CJDataManager.swift in Sources */,
+				20974F2C1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift in Sources */,
 				2002F8BB1E2A620700604AB7 /* UIColor+AudioNoteBook.swift in Sources */,
+				20450EDE1E2BE66E0029A24B /* CJBean.swift in Sources */,
+				20974F2F1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift in Sources */,
+				20974F281E2CB42900B86D9A /* CJAudioPlayer.swift in Sources */,
+				20974F261E2CB39800B86D9A /* constants.swift in Sources */,
+				20450EE01E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift in Sources */,
 				2002F8BF1E2BA63100604AB7 /* UIFont+AudioNoteBook.swift in Sources */,
 				2043EBE41E2A4F5800137B66 /* CJDataModel.xcdatamodeld in Sources */,
 				2002F8C21E2BAE8100604AB7 /* CJSimpleRecorder.swift in Sources */,
 				2002F8C71E2BAFFA00604AB7 /* CJAudioRecorder.swift in Sources */,
+				20974F201E2C880800B86D9A /* String+AudioNoteBook.swift in Sources */,
 				2043EBCA1E2A4BEE00137B66 /* ViewController.swift in Sources */,
 				2043EBC81E2A4BEE00137B66 /* AppDelegate.swift in Sources */,
+				208631BA1E2C7C2900452604 /* CJAudioItem.swift in Sources */,
 				2002F8B71E2A60E800604AB7 /* CJRecordViewController.swift in Sources */,
 				2002F8BD1E2B801900604AB7 /* CJBaseViewController.swift in Sources */,
 				20450EDB1E2BDA7A0029A24B /* CJAudioAgent.swift in Sources */,
+				20974F2A1E2CB7A500B86D9A /* CJSimplePlayer.swift in Sources */,
+				2016217B1E2CDC53007F7583 /* CJPlayerProgressBar.swift in Sources */,
+				20974F241E2CABA400B86D9A /* CJPlaybackTableViewCell.swift in Sources */,
 				2043EBE11E2A4E6200137B66 /* CJDataCache.swift in Sources */,
+				208631BC1E2C815B00452604 /* Date+AudioNoteBook.swift in Sources */,
 				2002F8B91E2A611A00604AB7 /* CJPlaybackListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

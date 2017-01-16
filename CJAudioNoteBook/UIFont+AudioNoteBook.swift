@@ -21,4 +21,10 @@ extension UIFont {
             return UIFont.preferredFont(forTextStyle: .caption1)
         }
     }
+    
+    open class var singleLineCellTitle: UIFont {
+        get {
+            return UIFont.preferredFont(forTextStyle: .caption1)
+        }
+    }
 }

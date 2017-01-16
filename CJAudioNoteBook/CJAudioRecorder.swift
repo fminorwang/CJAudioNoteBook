@@ -10,9 +10,16 @@ import Foundation
 
 protocol CJAudioRecorder {
     
-    func start(with fileName: String) -> Void
+    func start(with filePath: String) -> Void
     
     func stop() -> Void
     
     func pause() -> Void
+    
+    var isRecording: Bool { get }
+}
+
+protocol CJMeasurableAudioPlayer: CJAudioRecorder {
+    
+    var currentVolume: Float { get }
 }
