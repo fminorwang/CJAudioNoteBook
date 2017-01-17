@@ -29,9 +29,14 @@ extension CJSimpleRecorder {
         }
     }
     
-    func stop() {
+    func stop() -> Double {
         print("Stop recording.")
+        var _duration = 0.0
+        if let _currentDuration = _iRecorder?.currentTime {
+            _duration = _currentDuration
+        }
         _iRecorder?.stop()
+        return _duration
     }
     
     func pause() {

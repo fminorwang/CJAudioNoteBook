@@ -12,14 +12,12 @@ import AVFoundation
 /**
  CJSimplePlayer 只能用于播放本地音频文件
  */
-class CJSimplePlayer: CJAudioPlayer {
+class CJSimplePlayer: NSObject, CJAudioPlayer, AVAudioPlayerDelegate {
     
     fileprivate var _iPlayer: AVAudioPlayer?
-    public var playingPath: String?
     
-    init() {
-        
-    }
+    public var playingPath: String?
+    public var delegate: CJAudioPlayerDelegate?
 }
 
 // MARK: audio player protocol
@@ -27,7 +25,9 @@ extension CJSimplePlayer {
     func startToPlay(with filePath: String) {
         _clear()
         _init(with: filePath)
-        _iPlayer?.play()
+        if let _play = _iPlayer?.play(), _play == true {
+            self.delegate?.CJAudioPlayer(self, startToPlay: filePath)
+        }
     }
     
     func stop() {
@@ -51,6 +51,33 @@ extension CJSimplePlayer {
             return false
         }
     }
+    
+    public var duration: Double {
+        get {
+            if let _duration = _iPlayer?.duration {
+                return _duration
+            }
+            return 0.0
+        }
+    }
+    
+    public var currentProgress: Double {
+        get {
+            if let _progress = _iPlayer?.currentTime {
+                return _progress
+            }
+            return 0.0
+        }
+    }
+}
+
+// MARK: AVAudioPlayer delegate
+extension CJSimplePlayer {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if let _playingPath = self.playingPath {
+            self.delegate?.CJAudioPlayer(self, finishToPlay: _playingPath)
+        }
+    }
 }
 
 // MARK: internal
@@ -62,6 +89,7 @@ extension CJSimplePlayer {
             let _url = URL(fileURLWithPath: _filePath)
             do {
                 try _iPlayer = AVAudioPlayer(contentsOf: _url)
+                _iPlayer?.delegate = self
             } catch {
                 print("AVAudioPlayer initialize failed! " + error.localizedDescription)
             }

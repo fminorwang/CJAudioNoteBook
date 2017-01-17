@@ -12,7 +12,7 @@ protocol CJAudioRecorder {
     
     func start(with filePath: String) -> Void
     
-    func stop() -> Void
+    func stop() -> Double   // 结束录音，返回录音时长
     
     func pause() -> Void
     

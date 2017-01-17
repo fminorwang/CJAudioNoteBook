@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CJAudioPlayer {
+public protocol CJAudioPlayer {
     
     func startToPlay(with filePath: String) -> Void
     
@@ -19,4 +19,30 @@ protocol CJAudioPlayer {
     func stop() -> Void
     
     var isPlaying: Bool { get }
+    
+    /// 音频文件时长
+    var duration: Double { get }
+    
+    /// 当前播放时间
+    var currentProgress: Double { get }
+    
+    var delegate: CJAudioPlayerDelegate? { get set }
+}
+
+public protocol CJAudioPlayerDelegate {
+    
+    func CJAudioPlayer(_ player: CJAudioPlayer, startToPlay filePath: String)
+    
+    func CJAudioPlayer(_ player: CJAudioPlayer, finishToPlay filePath: String)
+}
+
+extension CJAudioPlayerDelegate {
+    
+    func CJAudioPlayer(_ player: CJAudioPlayer, startToPlay filePath: String) {
+        
+    }
+    
+    func CJAudioPlayer(_ player: CJAudioPlayer, finishToPlay filePath: String) {
+        
+    }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 extension Dictionary {
-    public func value(for aKey: Key, withDefault aValue: Any) -> Any {
+    func value(for aKey: Key, withDefault aValue: Any) -> Any {
         if let _value = self[aKey] {
             return _value
         } else {

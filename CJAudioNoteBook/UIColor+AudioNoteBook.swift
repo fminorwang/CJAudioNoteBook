@@ -10,19 +10,25 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    open class var theme: UIColor {
+    class var theme: UIColor {
         get {
             return UIColor(red: 0.0 / 255.0, green: 191.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
         }
     }
     
-    open class var navigationTitle: UIColor {
+    class var navigationTitle: UIColor {
         get {
             return UIColor.black
         }
     }
     
-    open class var singleLineCellTitle: UIColor {
+    class var singleLineCellTitle: UIColor {
+        get {
+            return UIColor.black
+        }
+    }
+    
+    class var text: UIColor {
         get {
             return UIColor.black
         }
