@@ -66,6 +66,7 @@ class CJRecordHintView: UIView {
                  until duration: Float? = nil,
                  at center: CGPoint = CGPoint(x: UIScreen.main.bounds.width / 2,
                                               y: UIScreen.main.bounds.height / 2)) {
+        _invalidateHideTimer()
         _hintLabel.text = text
         self.center = center
         if self.superview == nil {

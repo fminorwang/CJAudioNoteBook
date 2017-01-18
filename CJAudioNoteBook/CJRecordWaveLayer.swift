@@ -14,6 +14,10 @@ private let IMPULSE_INTERVAL = 0.2
 
 private let TEXT_LABEL_HEIGHT = CGFloat(40.0)
 
+/**
+ 显示波浪形音量
+ 通过正弦函数与固定两端点的贝塞尔曲线相乘得到波形音量图形
+ */
 class CJRecordWaveLayer: CJBaseRecordVolumeLayer {
     
     fileprivate var _isRecording = false

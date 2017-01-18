@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ 简单显示条状音量
+ */
 class CJRecordVolumeLayer: CJBaseRecordVolumeLayer {
     private let _iVolumeLayer = CALayer()
     

@@ -37,6 +37,16 @@ extension CJAudioAgentDelegate {
     func audioAgent(_ agent: CJAudioAgent, update progress: Double, total duration: Double) { }
 }
 
+/**
+ CJAudioAgent 控制录音和播放
+ 
+ iRecorder 内部录音的实现
+ iPlayer 内部播放器的实现
+ 
+ 其他模块通过注册 delegate 来获取录音和播放的各种事件
+ 继承自 CJBaseRecordVolumLayer 的控件可以通过注册 recordVolumeLayer 实时获取录音时的音量并渲染 UI
+ CJAudioAgent 通过 delegates 和 recordVolumeLayerArr 实现事件的广播
+ */
 public class CJAudioAgent: CJAudioPlayerDelegate {
     
     public static let shared = CJAudioAgent()           // singleton
