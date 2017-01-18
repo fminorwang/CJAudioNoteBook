@@ -13,6 +13,10 @@ public class CJBaseRecordVolumeLayer: CALayer {
         // override by subclasses
     }
     
+    public func startRecording() {
+        // override by subclasses
+    }
+    
     public func stopRecording() {
         self.volumeChanged(to: -160.0)
     }

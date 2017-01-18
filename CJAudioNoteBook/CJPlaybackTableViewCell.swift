@@ -20,6 +20,7 @@ class CJPlaybackTableViewCell: UITableViewCell {
     public let durationLabel = UILabel()
     public let progressBar = UIProgressView()
     public let playButton = CJPlayButton()
+    private let separator = UIView()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,10 +58,15 @@ class CJPlaybackTableViewCell: UITableViewCell {
         self.progressBar.alpha = 0.0
         self.contentView.addSubview(self.progressBar)
         
+        self.separator.translatesAutoresizingMaskIntoConstraints = false
+        self.separator.backgroundColor = UIColor.sepatator
+        self.contentView.addSubview(self.separator)
+        
         let _views = ["titleLabel"      : self.titleLabel as UIView,
                       "progressBar"     : self.progressBar as UIView,
                       "playButton"      : self.playButton as UIView,
-                      "durationLabel"   : self.durationLabel as UIView]
+                      "durationLabel"   : self.durationLabel as UIView,
+                      "sepline"         : self.separator]
         let _metrics = ["padding"   : CJ_PADDING,
                         "pb_wh"     : PLAY_BTN_WH,
                         "pgs_h"     : PROGRESS_BAR_HEIGHT]
@@ -80,7 +86,10 @@ class CJPlaybackTableViewCell: UITableViewCell {
             withVisualFormat: "H:|[progressBar]|",
             options: [], metrics: _metrics, views: _views))
         self.contentView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[progressBar(pgs_h)]|",
+            withVisualFormat: "V:[progressBar(pgs_h)]-0-[sepline(0.5)]|",
+            options: [], metrics: _metrics, views: _views))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[sepline]|",
             options: [], metrics: _metrics, views: _views))
     }
     
@@ -101,6 +110,7 @@ class CJPlaybackTableViewCell: UITableViewCell {
     
     public func resetToNormalState() {
         self.titleLabel.textColor = UIColor.singleLineCellTitle
+        self.durationLabel.textColor = UIColor.singleLineCellTitle
         self.progressBar.alpha = 0.0
         self.playButton.change(to: .play)
         self.isPlaying = false
@@ -108,11 +118,16 @@ class CJPlaybackTableViewCell: UITableViewCell {
     
     public func setToPlayingState() {
         self.titleLabel.textColor = UIColor.theme
+        self.durationLabel.textColor = UIColor.theme
         self.progressBar.alpha = 1.0
         self.displayProgressBar(withCurrent: CJAudioAgent.shared.playingProgress,
                                 total: CJAudioAgent.shared.playingDuration,
                                 animated: false)
-        self.playButton.change(to: .pause)
+        if let _audioItem = audioItem, CJAudioAgent.shared.isPlaying(audioItem: _audioItem) {
+            self.playButton.change(to: .pause)
+        } else {
+            self.playButton.change(to: .play)
+        }
         self.isPlaying = true
     }
     
@@ -122,7 +137,7 @@ class CJPlaybackTableViewCell: UITableViewCell {
         }
         let _current = progress / duration;
 //        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.curveLinear], animations: {
-            self.progressBar.setProgress(Float(_current), animated: animated)
+        self.progressBar.setProgress(Float(_current), animated: animated)
 //        }, completion: nil)
     }
     

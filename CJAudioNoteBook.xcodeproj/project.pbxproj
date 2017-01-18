@@ -17,6 +17,7 @@
 		2002F8C71E2BAFFA00604AB7 /* CJAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002F8C61E2BAFFA00604AB7 /* CJAudioRecorder.swift */; };
 		203530811E2DD858009798E7 /* CJPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203530801E2DD858009798E7 /* CJPlayButton.swift */; };
 		203530831E2DF838009798E7 /* CJReplayProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203530821E2DF838009798E7 /* CJReplayProgressButton.swift */; };
+		203530871E2E76E1009798E7 /* CJRecordWaveLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203530861E2E76E1009798E7 /* CJRecordWaveLayer.swift */; };
 		2043EBC81E2A4BEE00137B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043EBC71E2A4BEE00137B66 /* AppDelegate.swift */; };
 		2043EBCA1E2A4BEE00137B66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043EBC91E2A4BEE00137B66 /* ViewController.swift */; };
 		2043EBCD1E2A4BEE00137B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2043EBCB1E2A4BEE00137B66 /* Main.storyboard */; };
@@ -29,6 +30,9 @@
 		20450EDB1E2BDA7A0029A24B /* CJAudioAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDA1E2BDA7A0029A24B /* CJAudioAgent.swift */; };
 		20450EDE1E2BE66E0029A24B /* CJBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDD1E2BE66E0029A24B /* CJBean.swift */; };
 		20450EE01E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */; };
+		20558C3C1E2F1C8600B96B3D /* Double+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20558C3B1E2F1C8600B96B3D /* Double+AudioNoteBook.swift */; };
+		20558C3E1E2F725100B96B3D /* Int+CJAudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20558C3D1E2F725100B96B3D /* Int+CJAudioNoteBook.swift */; };
+		20558C401E2F7E4300B96B3D /* CJRecordHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20558C3F1E2F7E4300B96B3D /* CJRecordHintView.swift */; };
 		208631BA1E2C7C2900452604 /* CJAudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208631B91E2C7C2900452604 /* CJAudioItem.swift */; };
 		208631BC1E2C815B00452604 /* Date+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */; };
 		20974F201E2C880800B86D9A /* String+AudioNoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */; };
@@ -51,6 +55,7 @@
 		2002F8C61E2BAFFA00604AB7 /* CJAudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioRecorder.swift; sourceTree = "<group>"; };
 		203530801E2DD858009798E7 /* CJPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJPlayButton.swift; sourceTree = "<group>"; };
 		203530821E2DF838009798E7 /* CJReplayProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJReplayProgressButton.swift; sourceTree = "<group>"; };
+		203530861E2E76E1009798E7 /* CJRecordWaveLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRecordWaveLayer.swift; sourceTree = "<group>"; };
 		2043EBC41E2A4BEE00137B66 /* CJAudioNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJAudioNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2043EBC71E2A4BEE00137B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2043EBC91E2A4BEE00137B66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		20450EDA1E2BDA7A0029A24B /* CJAudioAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioAgent.swift; sourceTree = "<group>"; };
 		20450EDD1E2BE66E0029A24B /* CJBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJBean.swift; sourceTree = "<group>"; };
 		20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+AudioNoteBook.swift"; sourceTree = "<group>"; };
+		20558C3B1E2F1C8600B96B3D /* Double+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+AudioNoteBook.swift"; sourceTree = "<group>"; };
+		20558C3D1E2F725100B96B3D /* Int+CJAudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+CJAudioNoteBook.swift"; sourceTree = "<group>"; };
+		20558C3F1E2F7E4300B96B3D /* CJRecordHintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJRecordHintView.swift; sourceTree = "<group>"; };
 		208631B91E2C7C2900452604 /* CJAudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJAudioItem.swift; sourceTree = "<group>"; };
 		208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+AudioNoteBook.swift"; sourceTree = "<group>"; };
 		20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AudioNoteBook.swift"; sourceTree = "<group>"; };
@@ -118,6 +126,8 @@
 				20450EDF1E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift */,
 				208631BB1E2C815B00452604 /* Date+AudioNoteBook.swift */,
 				20974F1F1E2C880800B86D9A /* String+AudioNoteBook.swift */,
+				20558C3B1E2F1C8600B96B3D /* Double+AudioNoteBook.swift */,
+				20558C3D1E2F725100B96B3D /* Int+CJAudioNoteBook.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 			children = (
 				203530801E2DD858009798E7 /* CJPlayButton.swift */,
 				203530821E2DF838009798E7 /* CJReplayProgressButton.swift */,
+				20558C3F1E2F7E4300B96B3D /* CJRecordHintView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 			children = (
 				20974F2B1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift */,
 				20974F2E1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift */,
+				203530861E2E76E1009798E7 /* CJRecordWaveLayer.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -317,6 +329,8 @@
 			files = (
 				2043EBDE1E2A4D9600137B66 /* CJDataManager.swift in Sources */,
 				20974F2C1E2CC9AE00B86D9A /* CJRecordVolumeLayer.swift in Sources */,
+				20558C3C1E2F1C8600B96B3D /* Double+AudioNoteBook.swift in Sources */,
+				20558C401E2F7E4300B96B3D /* CJRecordHintView.swift in Sources */,
 				2002F8BB1E2A620700604AB7 /* UIColor+AudioNoteBook.swift in Sources */,
 				20450EDE1E2BE66E0029A24B /* CJBean.swift in Sources */,
 				20974F2F1E2CCFFF00B86D9A /* CJBaseRecordVolumeLayer.swift in Sources */,
@@ -324,6 +338,7 @@
 				20974F261E2CB39800B86D9A /* Constants.swift in Sources */,
 				20450EE01E2BE96E0029A24B /* Dictionary+AudioNoteBook.swift in Sources */,
 				2002F8BF1E2BA63100604AB7 /* UIFont+AudioNoteBook.swift in Sources */,
+				20558C3E1E2F725100B96B3D /* Int+CJAudioNoteBook.swift in Sources */,
 				2043EBE41E2A4F5800137B66 /* CJDataModel.xcdatamodeld in Sources */,
 				203530831E2DF838009798E7 /* CJReplayProgressButton.swift in Sources */,
 				2002F8C21E2BAE8100604AB7 /* CJSimpleRecorder.swift in Sources */,
@@ -331,6 +346,7 @@
 				20974F201E2C880800B86D9A /* String+AudioNoteBook.swift in Sources */,
 				2043EBCA1E2A4BEE00137B66 /* ViewController.swift in Sources */,
 				2043EBC81E2A4BEE00137B66 /* AppDelegate.swift in Sources */,
+				203530871E2E76E1009798E7 /* CJRecordWaveLayer.swift in Sources */,
 				208631BA1E2C7C2900452604 /* CJAudioItem.swift in Sources */,
 				2002F8B71E2A60E800604AB7 /* CJRecordViewController.swift in Sources */,
 				2002F8BD1E2B801900604AB7 /* CJBaseViewController.swift in Sources */,
@@ -461,10 +477,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SR9HWZ3HDL;
 				INFOPLIST_FILE = CJAudioNoteBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FLab.CJAudioNoteBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flab.audionotebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -474,10 +491,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = SR9HWZ3HDL;
 				INFOPLIST_FILE = CJAudioNoteBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FLab.CJAudioNoteBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flab.audionotebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

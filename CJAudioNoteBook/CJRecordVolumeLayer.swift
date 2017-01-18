@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class CJRecordVolumeLayer: CJBaseRecordVolumeLayer {
+class CJRecordVolumeLayer: CJBaseRecordVolumeLayer {
     private let _iVolumeLayer = CALayer()
     
     override init() {
         super.init()
-        self .addSublayer(_iVolumeLayer)
+        self.addSublayer(_iVolumeLayer)
     }
     
     required public init?(coder aDecoder: NSCoder) {

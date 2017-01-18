@@ -18,7 +18,7 @@ extension UIFont {
     
     class var navigationRightButton: UIFont {
         get {
-            return UIFont.preferredFont(forTextStyle: .caption1)
+            return UIFont.preferredFont(forTextStyle: .headline)
         }
     }
     

@@ -33,4 +33,22 @@ extension UIColor {
             return UIColor.black
         }
     }
+    
+    class var hintViewLabel: UIColor {
+        get {
+            return UIColor.white
+        }
+    }
+    
+    class var hintViewBackground: UIColor {
+        get {
+            return UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)
+        }
+    }
+    
+    class var sepatator: UIColor {
+        get {
+            return UIColor.gray
+        }
+    }
 }

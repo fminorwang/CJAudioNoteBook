@@ -25,7 +25,10 @@ class CJPlaybackListViewController: CJBaseViewController, UITableViewDelegate, U
         _tableView.frame = self.view.bounds
         _tableView.delegate = self
         _tableView.dataSource = self
+        _tableView.separatorStyle = .none
         self.view.addSubview(_tableView)
+        
+        _updateCurrentPlayingIndex()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +44,10 @@ class CJPlaybackListViewController: CJBaseViewController, UITableViewDelegate, U
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         CJAudioAgent.shared.remove(delegate: self)
+    }
+    
+    deinit {
+        print("deinit playback list view controller!")
     }
 }
 
@@ -106,6 +113,16 @@ extension CJPlaybackListViewController {
         if let _cell = _currentPlayingCell() {
             _cell.displayProgressBar(withCurrent: progress, total: duration)
         }
+    }
+    
+    fileprivate func _updateCurrentPlayingIndex() {
+        guard let _ident = CJAudioAgent.shared.currentPlayingItem?.beanIdentity else {
+            return
+        }
+        guard let _currentIndex = _audioItems.index(of: _ident) else {
+            return
+        }
+        self._currentPlayingIndex = _currentIndex
     }
     
     private func _currentPlayingCell() -> CJPlaybackTableViewCell? {

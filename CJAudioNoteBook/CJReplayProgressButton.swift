@@ -12,7 +12,7 @@ class CJReplayProgressButton: CJPlayButton {
 
     private let _progressLayer = CAShapeLayer()
     
-    public var progressWidth: CGFloat = 4.0
+    var progressWidth: CGFloat = 4.0
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -34,7 +34,20 @@ class CJReplayProgressButton: CJPlayButton {
     }
     
     func update(progress: CGFloat) {
+        _progressLayer.opacity = 1.0
         _progressLayer.strokeStart = 0.0
         _progressLayer.strokeEnd = progress
+    }
+    
+    func finishPlaying() {
+        _progressLayer.strokeEnd = 1.0
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
+            self._progressLayer.opacity = 0.0
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.50) {
+            self._progressLayer.strokeEnd = 0.0
+        }
     }
 }

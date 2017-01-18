@@ -9,3 +9,5 @@
 import Foundation
 
 let CJ_PADDING = 15.0
+
+let CJ_DEFAULT_ANIMATE_DURATION = 0.25

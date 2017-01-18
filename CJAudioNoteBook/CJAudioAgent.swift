@@ -66,6 +66,12 @@ public class CJAudioAgent: CJAudioPlayerDelegate {
         }
     }
     
+    public var isPlaying: Bool {
+        get {
+            return _iPlayer.isPlaying
+        }
+    }
+    
     public func isPlaying(audioItem: CJAudioItem) -> Bool {
         if let _currentItem = self.currentPlayingItem,
             _currentItem.beanIdentity == audioItem.beanIdentity,
@@ -101,6 +107,9 @@ extension CJAudioAgent {
             _delegates.forEach {
                 $0.audioAgent(self, startToRecord: _recordingItem)
             }
+            _recordVolumeLayerArr.forEach {
+                $0.startRecording()
+            }
         } catch {
             print("Audio session set to record mode failed! " + error.localizedDescription)
             return
@@ -118,8 +127,17 @@ extension CJAudioAgent {
                 _delegates.forEach {
                     $0.audioAgent(self, finishRecording: _recordingItem)
                 }
+                _recordVolumeLayerArr.forEach {
+                    $0.stopRecording()
+                }
             }
             self.currentRecordingItem = nil
+            
+            do {
+                try AVAudioSession.sharedInstance().setActive(false)
+            } catch {
+                return
+            }
         }
     }
 }
@@ -160,6 +178,12 @@ extension CJAudioAgent {
     public func stopPlaying() {
         _iPlayer.stop()
         self.currentPlayingItem = nil
+        
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        } catch {
+            return
+        }
     }
 }
 
@@ -231,7 +255,7 @@ extension CJAudioAgent {
         if let _recordedItem = audioItem {
             CJDataManager.shared.set(data: _recordedItem, for: _recordedItem.beanIdentity)
             var _list = self.recordedItemList
-            _list.append(_recordedItem.beanIdentity)
+            _list.insert(_recordedItem.beanIdentity, at: 0)
             CJDataManager.shared.set(data: _list as NSArray, for: kAllRecords)
         }
     }
